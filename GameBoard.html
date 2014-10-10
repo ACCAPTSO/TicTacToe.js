@@ -5,6 +5,13 @@
 		function $(id) { // simple function to shorten the normal document.getElementById
 			return document.getElementById(id);
 		}		
+		function mOver(obj) {
+    			obj.innerHTML = "X"
+		}
+
+		function mOut(obj) {
+    			obj.innerHTML = " "
+		}
 	</script>
 
 	<style>
@@ -50,26 +57,19 @@
 		<h1>Tic Tac Toe!</h1>
 		<div class="wrapper">
 		<div class="row">
-			<div class="box"></div>
-			<div class="box"></div>
-			<div class="box"></div>
+			<div class="box" onmouseover="mOver(this)" onmouseout="mOut(this)"> </div>
+			<div class="box" onmouseover="mOver(this)" onmouseout="mOut(this)"> </div>
+			<div class="box" onmouseover="mOver(this)" onmouseout="mOut(this)"> </div>
 		</div>
 		<div class="row">
-			<div class="box"></div>
-			<div class="box"></div>
-			<div class="box"></div>
+			<div class="box" onmouseover="mOver(this)" onmouseout="mOut(this)"> </div>
+			<div class="box" onmouseover="mOver(this)" onmouseout="mOut(this)"> </div>
+			<div class="box" onmouseover="mOver(this)" onmouseout="mOut(this)"> </div>
 		</div>
 		<div class="row">
-			<div class="box"></div>
-			<div class="box"></div>
-			<div class="box"></div>
-		</div>
-		<div class="user-inputs">
-			<label>Enter a row value: </label>
-			<input id="txtRowInput" class="user-input" type="text"></input>
-			<label>Enter a column value: </label>
-			<input id="txtColInput" class="user-input" type="text" ></input>
-			<input id="btnSubmit" type="Submit" value="Submit move"></input>
+			<div class="box" onmouseover="mOver(this)" onmouseout="mOut(this)"> </div>
+			<div class="box" onmouseover="mOver(this)" onmouseout="mOut(this)"> </div>
+			<div class="box" onmouseover="mOver(this)" onmouseout="mOut(this)"> </div>
 		</div>
 		</div>
 	</body>
