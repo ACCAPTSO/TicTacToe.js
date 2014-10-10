@@ -2,8 +2,11 @@
 <html>
 <head>
 	<script>
-		
+		function $(id) { // simple function to shorten the normal document.getElementById
+			return document.getElementById(id);
+		}		
 	</script>
+
 	<style>
 		body {
 			width: 400px;
@@ -14,15 +17,13 @@
 			border: 1px dashed black;
 		}		
 		
-		.row {			
-			display: inline-block;
+		.row {						
 			margin: 2px;
-			height: 100px;
-			width: 100px;
 		}		
 		
 		.box {
 			display: inline-block;
+			float: left;
 			margin: 2px;
 			height: 100px;
 			width: 100px;
@@ -31,7 +32,8 @@
 		}
 		
 		.user-inputs {
-			margin-top: 30px;
+			padding-top: 30px;
+			clear: both;
 		}
 		.user-input {
 			width: 25px;
