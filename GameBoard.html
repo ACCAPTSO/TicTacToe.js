@@ -3,39 +3,60 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="Style/StyleSheet.css">
 	<script>
+		var checkedBoxes = [];
 		function $(id) { // simple function to shorten the normal document.getElementById
 			return document.getElementById(id);
 		}		
+		
+		function addX(location) {
+			//get index of location in checkBoxes
+			var index = checkedBoxes.indexOf(location); 
+			
+			//if < 0, location isn't already in checkedBoxes
+			if (index < 0) {
+				checkedBoxes.push(location); //add location to checkedBoxes
+				var clickedBox = $(location); //get the clicked Box
+				var newH1 = document.createElement('h1'); //create new H1
+				newH1.setAttribute("class", "XO");
+				newH1.innerHTML = "X";
+				clickedBox.appendChild(newH1); 
+			}			
+		}
+		
 	</script>
-	
-
+	<style>
+	.XO {
+	padding-left: 50;
+	clear: both;
+}
+	</style>
 	
 </head>
 	<body>
 		<h1>Tic Tac Toe!</h1>
 		<div class="wrapper">
 		<div class="row">
-			<div id="row1col1" class="box"></div>
-			<div id="row1col2" class="box"></div>
-			<div id="row1col3" class="box"></div>
+			<div id="row1col1" onClick="addX('row1col1');" class="box"></div>
+			<div id="row1col2" onClick="addX('row1col2');" class="box"></div>
+			<div id="row1col3" onClick="addX('row1col3');" class="box"></div>
 		</div>
 		<div class="row">
-			<div id="row2col1" class="box"></div>
-			<div id="row2col2" class="box"></div>
-			<div id="row2col3" class="box"></div>
+			<div id="row2col1" onClick="addX('row2col1');" class="box"></div>
+			<div id="row2col2" onClick="addX('row2col2');" class="box"></div>
+			<div id="row2col3" onClick="addX('row2col3');" class="box"></div>
 		</div>
 		<div class="row">
-			<div id="row3col1" class="box"></div>
-			<div id="row3col2" class="box"></div>
-			<div id="row3col3" class="box"></div>
+			<div id="row3col1" onClick="addX('row3col1');" class="box"></div>
+			<div id="row3col2" onClick="addX('row3col2');" class="box"></div>
+			<div id="row3col3" onClick="addX('row3col3');" class="box"></div>
 		</div>
-		<div class="user-inputs">
+		<!--<div class="user-inputs">
 			<label>Enter a row value: </label>
 			<input id="txtRowInput" class="user-input" type="text"></input>
 			<label>Enter a column value: </label>
 			<input id="txtColInput" class="user-input" type="text" ></input>
 			<input id="btnSubmit" type="Submit" value="Submit move"></input>
-		</div>
+		</div> -->
 		</div>
 	</body>
 </html>
