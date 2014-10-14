@@ -5,12 +5,8 @@
 		function $(id) { // simple function to shorten the normal document.getElementById
 			return document.getElementById(id);
 		}		
-		function mOver(obj) {
+		function mClick(obj) {
     			obj.innerHTML = "X"
-		}
-
-		function mOut(obj) {
-    			obj.innerHTML = " "
 		}
 	</script>
 
@@ -54,19 +50,19 @@
 		<h1>Tic Tac Toe!</h1>
 		<div class="wrapper">
 		<div class="row">
-			<div class="box" onclick="mOver(this)"></div>
-			<div class="box" onmouseover="mOver(this)" onmouseout="mOut(this)"></div>
-			<div class="box" onmouseover="mOver(this)" onmouseout="mOut(this)"></div>
+			<div class="box" onclick="mClick(this)"></div>
+			<div class="box" onclick="mClick(this)"></div>
+			<div class="box" onclick="mClick(this)"></div>
 		</div>
 		<div class="row">
-			<div class="box" onmouseover="mOver(this)" onmouseout="mOut(this)"></div>
-			<div class="box" onmouseover="mOver(this)" onmouseout="mOut(this)"></div>
-			<div class="box" onmouseover="mOver(this)" onmouseout="mOut(this)"></div>
+			<div class="box" onclick="mClick(this)"></div>
+			<div class="box" onclick="mClick(this)"></div>
+			<div class="box" onclick="mClick(this)"></div>
 		</div>
 		<div class="row">
-			<div class="box" onmouseover="mOver(this)" onmouseout="mOut(this)"></div>
-			<div class="box" onmouseover="mOver(this)" onmouseout="mOut(this)"></div>
-			<div class="box" onmouseover="mOver(this)" onmouseout="mOut(this)"></div>
+			<div class="box" onclick="mClick(this)"></div>
+			<div class="box" onclick="mClick(this)"></div>
+			<div class="box" onclick="mClick(this)"></div>
 		</div>
 		</div>
 	</body>
