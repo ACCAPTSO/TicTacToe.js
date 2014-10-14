@@ -18,7 +18,8 @@ body {
 	height: 100px;
 	width: 100px;
 	border: 1px solid blue;
-	border-radius: 10px;
+	border-radius: 10px
+	text-align: center;
 }
 
 .XO {
